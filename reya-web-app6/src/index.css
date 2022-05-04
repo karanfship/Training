@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .card{
+    @apply
+      bg-white text-gray-700 w-72 min-h-[10rem]
+      shadow-lg rounded-md overflow-hidden
+  }
+
+  .product-title{
+    @apply
+      font-semibold text-2xl
+      overflow-ellipsis overflow-hidden whitespace-nowrap
+  }
+
+  .discount-percent{
+    @apply
+      bg-green-500
+      px-1.5 py-0.5 rounded-md
+      text-xs text-white
+  }
+}
 body {
   background-color: #000300;
 }
