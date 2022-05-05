@@ -8,7 +8,7 @@ import { useStateValue } from '../StateProvider';
 function Order({ order }) {
     const [{basket}, dispatch] = useStateValue();
     return (
-      <div className="order text-white">
+      <div className="order">
         <h4>Order</h4>
         <p>{moment.unix(order.data.created).format("MMMM Do YYYY, h:mm")}</p>
 
@@ -21,6 +21,7 @@ function Order({ order }) {
             title={item.title}
             image={item.image}
             price={item.price}
+            actualprice={item.actualprice}
             rating={item.rating}
             hidebutton={true}
           />

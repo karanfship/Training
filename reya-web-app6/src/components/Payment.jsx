@@ -91,6 +91,7 @@ function Payment() {
                   title={item.title}
                   image={item.image}
                   price={item.price}
+                  actualprice={item.actualprice}
                   rating={item.rating}
                 />
               ))}
