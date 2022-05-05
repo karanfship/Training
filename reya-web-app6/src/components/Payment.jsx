@@ -4,10 +4,10 @@ import CurrencyFormat from 'react-currency-format';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import CheckoutProduct from './CheckoutProduct';
 import './Payment.css';
-import { getBasketTotal } from './reducer';
-import { useStateValue } from './StateProvider';
-import axios from "./axios";
-import { db } from './firebase';
+import { getBasketTotal } from '../reducer';
+import { useStateValue } from '../StateProvider';
+import axios from "../axios";
+import { db } from '../firebase';
 import { doc , setDoc } from 'firebase/firestore'
 
 function Payment() {
