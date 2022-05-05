@@ -18,8 +18,8 @@ function Product({ id, title, image, rating, price, actualprice }) {
     });
   };
   return (
-    <div className="card">
-      <img className="w-full h-full object-cover" src={image} alt={title} />
+    <div className="card hover:scale-105 duration-100">
+      <img className="w-full h-56 object-cover object-top" src={image} alt={title} />
       <div className="p-5 flex flex-col gap-3">
         <h2 className='product-title'>{title}</h2>
         <p className="text-xl font-bold">
