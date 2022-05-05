@@ -1,7 +1,11 @@
 import React from 'react';
 import Typed from 'react-typed';
+import { Link } from 'react-router-dom';
+import { useStateValue } from "../StateProvider";
 
 const Hero = () => {
+  const [{ user }] = useStateValue();
+
   return (
     <div className='text-white'>
       <div className='max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center'>
@@ -16,14 +20,16 @@ const Hero = () => {
             Fast, cheap, reliable products for
           </p>
           <Typed
-          className='md:text-5xl sm:text-4xl text-xl font-bold md:pl-4 text-gray-500 pl-2'
+            className='md:text-5xl sm:text-4xl text-xl font-bold md:pl-4 text-gray-500 pl-2'
             strings={['Purse', 'Bag', 'Cloth']}
             typeSpeed={120}
             backSpeed={140}
             loop
           />
         </div>
-        <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Get Started</button>
+        <Link to={!user && "/login"}>
+          <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Get Started</button>
+        </Link>
       </div>
     </div>
   );
